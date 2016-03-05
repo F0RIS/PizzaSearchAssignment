@@ -11,15 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4f22c74-571a-4bfa-b113-3d0e572b1ad8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Interfaces/IRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/JsonParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/RequestDealer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/TokenRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Models/SearchItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/TokenRequest.java" afterPath="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/TokenRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PizzaSearchAssignment.iws" />
@@ -48,40 +43,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="JsonParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/JsonParser.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.6020236">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TokenRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/TokenRequest.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/TokenRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+              <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#574#590#0" expanded="true" />
+                <element signature="e#582#598#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestDealer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/RequestDealer.java">
+      <file leaf-file-name="RequestDealer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/RequestDealer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50421584">
-              <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1106#1122#0" expanded="true" />
-                <element signature="e#1195#1417#0" expanded="true" />
-                <element signature="e#1416#1417#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Models/SearchItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,8 +93,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -1666,6 +1668,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Interfaces/IRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/RequestDealer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/TokenRequest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/RequestDealer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Models/SearchItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/TokenRequest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Constants.java" />
       </list>
     </option>
   </component>
@@ -1817,7 +1823,29 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Interfaces" />
+              <option name="myItemId" value="Network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PizzaSearchAssignment" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pizzasearchassignment" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2060,12 +2088,24 @@
       <option name="project" value="LOCAL" />
       <updated>1457179579675</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="a lot of stuff">
+      <created>1457203469193</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1457203469193</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactoring and constants intefrace added">
+      <created>1457204101335</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1457204101335</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2073,7 +2113,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4573269" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43961352" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993559" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1913767" sideWeight="0.5056361" order="2" side_tool="true" content_ui="tabs" />
@@ -2088,7 +2128,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1913767" sideWeight="0.49436393" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1913767" sideWeight="0.49436393" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2114,7 +2154,9 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Init&#10;" />
     <MESSAGE value="Added AppController and volley" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added AppController and volley" />
+    <MESSAGE value="a lot of stuff" />
+    <MESSAGE value="Refactoring and constants intefrace added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring and constants intefrace added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2123,54 +2165,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#786#983#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1452#1478#0" expanded="true" />
+            <element signature="e#926#1123#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1592#1618#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#786#983#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1452#1478#0" expanded="true" />
+            <element signature="e#926#1123#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1592#1618#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#786#983#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1452#1478#0" expanded="true" />
+            <element signature="e#926#1123#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1592#1618#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#786#983#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1452#1478#0" expanded="true" />
+            <element signature="e#926#1123#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1592#1618#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2241,23 +2283,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.275862">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding>
-            <element signature="e#1144#1164#0" expanded="true" />
-            <element signature="e#1305#1321#0" expanded="true" />
+            <element signature="e#1112#1132#0" expanded="true" />
+            <element signature="e#1273#1289#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2281,24 +2313,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61045533">
           <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#786#983#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1452#1478#0" expanded="true" />
+            <element signature="e#926#1123#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1592#1618#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/JsonParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2310,27 +2334,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/TokenRequest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.18549748">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#574#590#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/RequestDealer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/JsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50421584">
-          <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.35413152">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Models/SearchItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/TokenRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1106#1122#0" expanded="true" />
-            <element signature="e#1195#1417#0" expanded="true" />
-            <element signature="e#1416#1417#0" expanded="true" />
+            <element signature="e#582#598#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Network/RequestDealer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/pizzasearch/f0ris/com/pizzasearchassignment/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6020236">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

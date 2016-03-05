@@ -1,4 +1,4 @@
-package pizzasearch.f0ris.com.pizzasearchassignment;
+package pizzasearch.f0ris.com.pizzasearchassignment.Network;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.Response;
@@ -31,8 +31,8 @@ public class TokenRequest extends JsonObjectRequest {
             }
 
             try {
-                callback.onError(new JSONObject(volleyError.getMessage()).getString("error"));
                 System.out.println(volleyError.getMessage());
+                callback.onError(new JSONObject(volleyError.getMessage()).getString("error"));
             } catch (Exception e) {
                 e.printStackTrace();
             }

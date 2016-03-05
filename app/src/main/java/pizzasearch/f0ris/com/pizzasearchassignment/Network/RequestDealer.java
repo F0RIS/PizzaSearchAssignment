@@ -1,11 +1,8 @@
-package pizzasearch.f0ris.com.pizzasearchassignment;
+package pizzasearch.f0ris.com.pizzasearchassignment.Network;
 
 import android.os.Handler;
 
-import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONObject;
@@ -13,22 +10,22 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
+import pizzasearch.f0ris.com.pizzasearchassignment.Constants;
 import pizzasearch.f0ris.com.pizzasearchassignment.Interfaces.IRequest;
+import pizzasearch.f0ris.com.pizzasearchassignment.JsonParser;
 
 /**
  * Created by F0RIS on 05.03.2016.
  */
 public class RequestDealer {
 
-//    protected static final String API_URL = "http://travel.bomavi.com.ua/api/";
 
     public static void searchPizzaBar(final Handler.Callback searchCallback) {
 
-        String requestUrl = "https://api.foursquare.com/v2/search/recommendations?client_id=F5JYW4HJ0MV4RSMSXK3OEQLSRUIHFY2CPPWHY4HR4UPDVGB0&client_secret=1K4PUIOD0CCLPK3TIZIZGLEDE4XAC05AC1U45FYRYW1J53KT&v=20130815&locale=ru&m=foursquare&query=Пиццерия&limit=30&mode=typed&nearGeoId=72057594038637653&ll=47.97932583355205%2C37.80326843261719&wsid=DUHPHALX3SWNNW0VPQUHTINNUOLBN1";
+        String requestUrl = Constants.PIZZA_BAR_QUERY_URL;
 
-
-        Map<String, String> params = new HashMap<String, String>();
-
+        Map<String, String> params = new HashMap<>();
         makeAdvancedRequest(Request.Method.GET, requestUrl, params, new IParseFunction() {
             @Override
             public void parse(JSONObject response) {

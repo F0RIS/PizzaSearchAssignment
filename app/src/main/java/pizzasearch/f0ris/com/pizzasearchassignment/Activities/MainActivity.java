@@ -1,4 +1,4 @@
-package pizzasearch.f0ris.com.pizzasearchassignment;
+package pizzasearch.f0ris.com.pizzasearchassignment.Activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+
+import pizzasearch.f0ris.com.pizzasearchassignment.Network.RequestDealer;
+import pizzasearch.f0ris.com.pizzasearchassignment.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
