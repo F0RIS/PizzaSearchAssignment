@@ -1,6 +1,7 @@
 package pizzasearch.f0ris.com.pizzasearchassignment.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public boolean handleMessage(Message msg) {
                 progressDialog.dismiss();
+                startActivity(new Intent(MainActivity.this, SearchResultActivity.class));
                 return true;
             }
         };
