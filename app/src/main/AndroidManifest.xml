@@ -3,6 +3,7 @@
     package="pizzasearch.f0ris.com.pizzasearchassignment">
 
     <application
+        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
