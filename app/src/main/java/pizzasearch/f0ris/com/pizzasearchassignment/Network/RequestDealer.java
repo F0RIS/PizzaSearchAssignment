@@ -7,6 +7,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONObject;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,6 +31,7 @@ public class RequestDealer {
             @Override
             public void parse(JSONObject response) {
                 JsonParser.parseVenue(response);
+                Collections.sort(AppController.searchResultArray);
                 searchCallback.handleMessage(null);
             }
         });

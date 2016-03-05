@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
 
 
     <ImageView
@@ -16,12 +18,15 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/photo"
-        android:layout_toRightOf="@+id/photo"
         android:padding="5dp"
-        android:text="4 Friends Coffee"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="4 Friends Coffee4 Friends Coffee"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/photo"
+        android:layout_toRightOf="@+id/photo"
+        android:layout_toEndOf="@+id/photo" />
 
     <TextView
         android:id="@+id/distance"
@@ -31,7 +36,7 @@
         android:layout_toEndOf="@+id/photo"
         android:layout_toRightOf="@+id/photo"
         android:layout_alignBottom="@id/photo"
-        android:text="distance: 252"
+        android:text="Расстояние: 777"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -40,13 +45,12 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rating_green_bg"
         android:padding="3dp"
+        android:layout_margin="7dp"
         android:text="8.6"
         android:textColor="#fff"
-        android:textStyle="bold"
+        android:textStyle="normal"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_marginRight="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 

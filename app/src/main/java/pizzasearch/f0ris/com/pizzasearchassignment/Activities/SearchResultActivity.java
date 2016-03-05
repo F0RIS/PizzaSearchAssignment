@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.R;
+import pizzasearch.f0ris.com.pizzasearchassignment.SearchAdapter;
 
 public class SearchResultActivity extends AppCompatActivity {
 
@@ -20,9 +21,9 @@ public class SearchResultActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        SearchAdapter searchAdapter = new SearchAdapter(this);
 
-
-//        ((ListView) findViewById(R.id.search_result_list_view)).setAdapter();
+        ((ListView) findViewById(R.id.search_result_list_view)).setAdapter(searchAdapter);
     }
 
 }
