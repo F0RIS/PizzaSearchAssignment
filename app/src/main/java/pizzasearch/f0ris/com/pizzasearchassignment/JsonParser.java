@@ -25,7 +25,10 @@ public class JsonParser {
                 JSONObject object = parentObject.getJSONObject("venue");
 
                 item.name = object.getString("name");
-                item.rating = Float.parseFloat(object.getString("rating"));
+                try {
+                    item.rating = Float.parseFloat(object.getString("rating"));
+                } catch (JSONException e) {
+                }
                 item.distance = object.getJSONObject("location").getInt("distance");
 
 

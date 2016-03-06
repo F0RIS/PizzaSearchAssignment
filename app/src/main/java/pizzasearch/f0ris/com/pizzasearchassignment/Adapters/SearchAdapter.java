@@ -115,6 +115,9 @@ public class SearchAdapter extends BaseAdapter {
         if (item.rating > 4)
             rating_bg.setColor(rating_bg_colors.get((int) Math.floor(item.rating)));
         else
+        if (item.rating == 0) //no rating
+            viewHolder.rating.setVisibility(View.GONE);
+        else //low rating
             rating_bg.setColor(Color.RED);
 
 
