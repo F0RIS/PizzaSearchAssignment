@@ -3,7 +3,8 @@
     package="pizzasearch.f0ris.com.pizzasearchassignment">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".AppController"
         android:allowBackup="true"
@@ -24,6 +25,10 @@
         <activity
             android:name=".Activities.SearchResultActivity"
             android:label="@string/title_activity_search_result"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.VenueDetailActivity"
+            android:label="@string/title_activity_venue_detail"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

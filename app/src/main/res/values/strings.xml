@@ -5,4 +5,5 @@
     <string name="emulate_NY">Emulate NY</string>
     <string name="title_activity_search_result">SearchResultActivity</string>
     <string name="distance">Расстояние: %s м.</string>
+    <string name="title_activity_venue_detail">VenueDetailActivity</string>
 </resources>
