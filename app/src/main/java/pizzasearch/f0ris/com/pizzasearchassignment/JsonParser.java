@@ -31,6 +31,15 @@ public class JsonParser {
                 }
                 item.distance = object.getJSONObject("location").getInt("distance");
 
+                JSONArray jsonArray1 = object.getJSONObject("location").getJSONArray("formattedAddress");
+
+                try {
+                    item.address = (String) jsonArray1.get(0);
+                    item.address += ", " + jsonArray1.get(1);
+                } catch (Exception e) {
+                }
+
+                item.category = ((JSONObject) object.getJSONArray("categories").get(0)).getString("name");
 
                 object = ((JSONObject) jsonArray.get(i)).getJSONObject("photo");
                 item.photo_url = object.getString("prefix") + "240x240" + object.getString("suffix");
