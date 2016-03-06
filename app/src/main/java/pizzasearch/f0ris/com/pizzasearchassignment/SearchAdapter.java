@@ -3,7 +3,6 @@ package pizzasearch.f0ris.com.pizzasearchassignment;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +11,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.Models.SearchItem;
 
@@ -23,7 +25,7 @@ import pizzasearch.f0ris.com.pizzasearchassignment.Models.SearchItem;
 public class SearchAdapter extends BaseAdapter {
 
 
-    private final LayoutInflater inflator;
+    private final LayoutInflater inflater;
     private ArrayList<SearchItem> arrayList;
     private SparseIntArray rating_bg_colors = new SparseIntArray() {
         {
@@ -35,9 +37,24 @@ public class SearchAdapter extends BaseAdapter {
         }
     };
 
+    private ImageLoader imageLoader;
+    private DisplayImageOptions options;
+
     public SearchAdapter(Context context) {
-        inflator = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         arrayList = AppController.searchResultArray;
+
+        imageLoader = ImageLoader.getInstance();
+        options = new DisplayImageOptions.Builder().cacheInMemory(true)
+                .cacheOnDisc(true)
+                .cacheInMemory(true)
+                .resetViewBeforeLoading(true)
+//                .showImageForEmptyUri(fallbackImage)
+//                .showImageOnFail(fallbackImage)
+//                .showImageOnLoading(fallbackImage)
+                .build();
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).build();
+        imageLoader.init(config);
 
     }
 
@@ -67,12 +84,12 @@ public class SearchAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ViewHolder viewHolder;
+        final ViewHolder viewHolder;
 
         if (convertView == null) {
-            convertView = inflator.inflate(R.layout.search_result_item, parent, false);
             viewHolder = new ViewHolder();
-//            viewHolder.photo = (CircleImageView) convertView.findViewById(R.id.profile_image);
+            convertView = inflater.inflate(R.layout.search_result_item, parent, false);
+            viewHolder.photo = (ImageView) convertView.findViewById(R.id.photo);
 
             viewHolder.name = (TextView) convertView.findViewById(R.id.name);
             viewHolder.distance = (TextView) convertView.findViewById(R.id.distance);
@@ -82,12 +99,14 @@ public class SearchAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        SearchItem item = arrayList.get(position);
+        final SearchItem item = arrayList.get(position);
 
         viewHolder.name.setText(item.name + item.name);
         viewHolder.distance.setText(String.format(AppController.getAppContext().getString(R.string.distance), String.valueOf(item.distance)));
         viewHolder.rating.setText(String.valueOf(item.rating));
 
+
+        imageLoader.displayImage(item.photo_url,viewHolder.photo, options);
 
         GradientDrawable rating_bg = (GradientDrawable) viewHolder.rating.getBackground();
 

@@ -30,6 +30,7 @@ public class RequestDealer {
         makeAdvancedRequest(Request.Method.GET, requestUrl, params, new IParseFunction() {
             @Override
             public void parse(JSONObject response) {
+                AppController.searchResultArray.clear();
                 JsonParser.parseVenue(response);
                 Collections.sort(AppController.searchResultArray);
                 searchCallback.handleMessage(null);
