@@ -24,7 +24,12 @@ public class RequestDealer {
 
     public static void searchPizzaBar(final Handler.Callback searchCallback) {
 
-        String requestUrl = Constants.PIZZA_BAR_QUERY_URL;
+
+        //set request limit
+        String requestUrl = Constants.PIZZA_BAR_QUERY_URL
+                + "&limit="
+                + String.valueOf(AppController.searchResultArray.size() + Constants.FETCH_COUNT);
+
 
         Map<String, String> params = new HashMap<>();
         makeAdvancedRequest(Request.Method.GET, requestUrl, params, new IParseFunction() {
@@ -32,6 +37,7 @@ public class RequestDealer {
             public void parse(JSONObject response) {
                 AppController.searchResultArray.clear();
                 JsonParser.parseVenue(response);
+                //TODO solve distance issue
                 Collections.sort(AppController.searchResultArray);
                 searchCallback.handleMessage(null);
             }

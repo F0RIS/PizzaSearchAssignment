@@ -15,7 +15,6 @@ public interface Constants {
             + "&client_secret=" + client_secret
             + "&v=20130815&locale=ru&m=foursquare" +
             "&categoryId=4bf58dd8d48988d1ca941735" +
-            "&limit=10" +
             "&mode=typed" +
             "&nearGeoId=72057594038637653" +
             "&ll=47.97932583355205%2C37.80326843261719";
