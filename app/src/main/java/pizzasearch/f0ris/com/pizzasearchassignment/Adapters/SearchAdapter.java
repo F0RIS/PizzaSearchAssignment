@@ -1,4 +1,4 @@
-package pizzasearch.f0ris.com.pizzasearchassignment;
+package pizzasearch.f0ris.com.pizzasearchassignment.Adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -17,7 +17,9 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
 
+import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
 import pizzasearch.f0ris.com.pizzasearchassignment.Models.SearchItem;
+import pizzasearch.f0ris.com.pizzasearchassignment.R;
 
 /**
  * Created by F0RIS on 05.03.2016.
@@ -101,7 +103,7 @@ public class SearchAdapter extends BaseAdapter {
 
         final SearchItem item = arrayList.get(position);
 
-        viewHolder.name.setText(item.name + item.name);
+        viewHolder.name.setText(item.name);
         viewHolder.distance.setText(String.format(AppController.getAppContext().getString(R.string.distance), String.valueOf(item.distance)));
         viewHolder.rating.setText(String.valueOf(item.rating));
 
