@@ -22,13 +22,14 @@ import pizzasearch.f0ris.com.pizzasearchassignment.JsonParser;
 public class RequestDealer {
 
 
-    public static void searchPizzaBar(final Handler.Callback searchCallback) {
+    public static void searchPizzaBar(final Handler.Callback searchCallback, double latitude, double longitude) {
 
 
         //set request limit
         String requestUrl = Constants.PIZZA_BAR_QUERY_URL
                 + "&limit="
-                + String.valueOf(AppController.searchResultArray.size() + Constants.FETCH_COUNT);
+                + String.valueOf(AppController.searchResultArray.size() + Constants.FETCH_COUNT)
+                + "&ll="+latitude+"%2C"+longitude;
 
 
         Map<String, String> params = new HashMap<>();

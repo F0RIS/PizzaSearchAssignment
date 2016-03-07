@@ -7,10 +7,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
+import pizzasearch.f0ris.com.pizzasearchassignment.GPSDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.Network.RequestDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.R;
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Handler.Callback searchCallback;
     private ProgressDialog progressDialog;
+    private GPSDealer gpsDealer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,18 +38,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
+        gpsDealer = new GPSDealer();
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.search_button:
+                gpsDealer.printLL();
+
                 progressDialog = new ProgressDialog(this);
                 progressDialog.setMessage(getString(R.string.search));
                 progressDialog.show();
 
                 AppController.searchResultArray.clear(); //deleting previous search result
-                RequestDealer.searchPizzaBar(searchCallback);
+
+                RequestDealer.searchPizzaBar(searchCallback, 40.7127837, -74.0059413); //NY location
+
+
                 break;
         }
     }
