@@ -52,13 +52,10 @@ public class GPSDealer implements LocationListener {
     public void onLocationChanged(Location location) {
         locationDetected = true;
 
-        String msg = "New Latitude: " + location.getLatitude()
-                + "New Longitude: " + location.getLongitude();
-
         latitude = location.getLatitude();
         longitude = location.getLongitude();
 
-        Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "Location detected", Toast.LENGTH_LONG).show();
     }
 
     @Override

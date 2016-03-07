@@ -13,6 +13,7 @@ import pizzasearch.f0ris.com.pizzasearchassignment.Adapters.SearchAdapter;
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
 import pizzasearch.f0ris.com.pizzasearchassignment.Network.RequestDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.R;
+import pizzasearch.f0ris.com.pizzasearchassignment.Utils;
 import pizzasearch.f0ris.com.pizzasearchassignment.Views.LoadMoreListView;
 
 public class SearchResultActivity extends AppCompatActivity {
@@ -53,5 +54,9 @@ public class SearchResultActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if (Utils.isNetworkConnected()){
+            Utils.storeResultsOnDisk();
+        }
     }
 }

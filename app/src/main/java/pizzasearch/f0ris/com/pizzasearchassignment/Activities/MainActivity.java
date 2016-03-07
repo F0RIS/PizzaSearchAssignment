@@ -10,11 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
 import pizzasearch.f0ris.com.pizzasearchassignment.GPSDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.Network.RequestDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.R;
+import pizzasearch.f0ris.com.pizzasearchassignment.Utils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,7 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         searchCallback = new Handler.Callback() {
             @Override
             public boolean handleMessage(Message msg) {
-                progressDialog.dismiss();
+                if (progressDialog != null)
+                    progressDialog.dismiss();
                 startActivity(new Intent(MainActivity.this, SearchResultActivity.class));
                 return true;
             }
@@ -49,6 +52,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.search_button:
 
+                if (!Utils.isNetworkConnected()) {
+                    Utils.loadResultsFromDisk();
+                    searchCallback.handleMessage(null);
+                    Toast.makeText(this, R.string.loaded_from_cache, Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
                 GPSDealer.emulateNYLocation(((CheckBox) findViewById(R.id.emulate_NY_checkBox)).isChecked());
 
                 if (GPSDealer.isLocationDetected()) {
@@ -59,13 +69,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     AppController.searchResultArray.clear(); //deleting previous search result
                     RequestDealer.searchPizzaBar(searchCallback);
                 } else
-                    noLocationDialogShow();
+                    showNoLocationDialog();
 
                 break;
         }
     }
 
-    private void noLocationDialogShow() {
+    private void showNoLocationDialog() {
 
         new AlertDialog.Builder(this)
                 .setTitle(getString(R.string.no_location))
