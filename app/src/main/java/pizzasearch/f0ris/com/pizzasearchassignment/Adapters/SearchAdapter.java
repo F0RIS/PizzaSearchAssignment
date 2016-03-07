@@ -3,7 +3,6 @@ package pizzasearch.f0ris.com.pizzasearchassignment.Adapters;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -33,23 +31,17 @@ public class SearchAdapter extends BaseAdapter {
 
 
     private ImageLoader imageLoader;
-    private DisplayImageOptions options;
 
     public SearchAdapter(Context context) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         arrayList = AppController.searchResultArray;
 
         imageLoader = ImageLoader.getInstance();
-        options = new DisplayImageOptions.Builder().cacheInMemory(true)
-                .cacheOnDisc(true)
-                .cacheInMemory(true)
-                .resetViewBeforeLoading(true)
-//                .showImageForEmptyUri(fallbackImage)
-//                .showImageOnFail(fallbackImage)
-//                .showImageOnLoading(fallbackImage)
-                .build();
+
+
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context).build();
         imageLoader.init(config);
+
 
     }
 
@@ -101,7 +93,7 @@ public class SearchAdapter extends BaseAdapter {
         viewHolder.rating.setText(String.valueOf(item.rating));
 
 
-        imageLoader.displayImage(item.photo_url,viewHolder.photo, options);
+        imageLoader.displayImage(item.photo_url,viewHolder.photo, Constants.imageLoaderOptions);
 
         GradientDrawable rating_bg = (GradientDrawable) viewHolder.rating.getBackground();
 

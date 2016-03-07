@@ -41,8 +41,11 @@ public class JsonParser {
 
                 item.category = ((JSONObject) object.getJSONArray("categories").get(0)).getString("name");
 
-                object = ((JSONObject) jsonArray.get(i)).getJSONObject("photo");
-                item.photo_url = object.getString("prefix") + "240x240" + object.getString("suffix");
+                try {
+                    object = ((JSONObject) jsonArray.get(i)).getJSONObject("photo");
+                    item.photo_url = object.getString("prefix") + "240x240" + object.getString("suffix");
+                } catch (JSONException e) {
+                }
 
                 AppController.searchResultArray.add(item);
             }

@@ -41,7 +41,7 @@ public class VenueDetailActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.address)).setText(curVenue.address);
 
         ImageLoader imageLoader = ImageLoader.getInstance();
-        imageLoader.displayImage(curVenue.photo_url, ((ImageView) findViewById(R.id.photo)));
+        imageLoader.displayImage(curVenue.photo_url, ((ImageView) findViewById(R.id.photo)), Constants.imageLoaderOptions);
 
         TextView ratingView = (TextView) findViewById(R.id.rating);
         ratingView.setText(String.valueOf(curVenue.rating));

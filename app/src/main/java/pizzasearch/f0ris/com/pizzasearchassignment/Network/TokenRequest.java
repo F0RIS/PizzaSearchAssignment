@@ -19,8 +19,6 @@ import pizzasearch.f0ris.com.pizzasearchassignment.Interfaces.IRequest;
 public class TokenRequest extends JsonObjectRequest {
 
     private static IRequest callback;
-    public static Map<String, String> emptyMap = new HashMap<String, String>();
-
 
     static Response.ErrorListener errorListener = new Response.ErrorListener() {
         @Override

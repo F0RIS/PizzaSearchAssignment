@@ -11,7 +11,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:padding="10dp"
-
+        android:src="@drawable/no_photo"
         />
 
 
@@ -28,42 +28,42 @@
         android:singleLine="true"
         android:text="4 Friends Coffee"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <TextView
         android:id="@+id/category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/name"
         android:layout_alignLeft="@id/name"
         android:layout_alignStart="@id/name"
+        android:layout_below="@id/name"
         android:padding="5dp"
         android:singleLine="true"
         android:text="Кофейня, Кондитерская и Пиццерия"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/black"
-        />
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/address_title"
-        android:padding="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/address_title"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/black"
         android:layout_below="@+id/photo"
         android:layout_toLeftOf="@+id/address"
-        android:layout_toStartOf="@+id/address" />
+        android:layout_toStartOf="@+id/address"
+        android:padding="5dp"
+        android:text="@string/address_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:id="@+id/address"
-        android:padding="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ул. Постышева, 117а (просп. Комсомольский), Донецк, 83000"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_below="@+id/photo"
+        android:layout_toEndOf="@+id/photo"
         android:layout_toRightOf="@+id/photo"
-        android:layout_toEndOf="@+id/photo" />
+        android:padding="5dp"
+        android:text="ул. Постышева, 117а (просп. Комсомольский), Донецк, 83000"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/rating"

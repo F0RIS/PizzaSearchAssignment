@@ -55,7 +55,7 @@ public class GPSDealer implements LocationListener {
         latitude = location.getLatitude();
         longitude = location.getLongitude();
 
-        Toast.makeText(context, "Location detected", Toast.LENGTH_LONG).show();
+//        Toast.makeText(context, "Location detected", Toast.LENGTH_LONG).show();
     }
 
     @Override

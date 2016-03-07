@@ -22,16 +22,20 @@ import pizzasearch.f0ris.com.pizzasearchassignment.JsonParser;
  */
 public class RequestDealer {
 
+    final static String PIZZA_BAR_QUERY_URL = "https://api.foursquare.com/v2/search/recommendations?"
+            + "&client_id=F5JYW4HJ0MV4RSMSXK3OEQLSRUIHFY2CPPWHY4HR4UPDVGB0"
+            + "&client_secret=1K4PUIOD0CCLPK3TIZIZGLEDE4XAC05AC1U45FYRYW1J53KT"
+            + "&v=20130815&locale=ru&m=foursquare" +
+            "&query=pizza&keywords=pizza,pizzabar" +
+            "&sortByDistance=1";
+
 
     public static void searchPizzaBar(final Handler.Callback searchCallback) {
 
-
         //setting request params
-        String requestUrl = Constants.PIZZA_BAR_QUERY_URL
+        String requestUrl = PIZZA_BAR_QUERY_URL
                 + "&limit=" + String.valueOf(AppController.searchResultArray.size() + Constants.FETCH_COUNT)
                 + "&ll=" + GPSDealer.getLatitude() + "%2C" + GPSDealer.getLongitude();
-
-        System.out.println(requestUrl);
 
         Map<String, String> params = new HashMap<>();
         makeAdvancedRequest(Request.Method.GET, requestUrl, params, new IParseFunction() {
@@ -39,7 +43,6 @@ public class RequestDealer {
             public void parse(JSONObject response) {
                 AppController.searchResultArray.clear();
                 JsonParser.parseVenue(response);
-//                Collections.sort(AppController.searchResultArray);
                 searchCallback.handleMessage(null);
             }
         });
@@ -57,19 +60,9 @@ public class RequestDealer {
         JsonObjectRequest jsonObjectRequest = new TokenRequest(
                 method, url, new JSONObject(params), new IRequest() {
 
-
             @Override
             public void onError(String errorMessage) {
                 System.out.println("onError:" + errorMessage);
-                /*
-                if (answerHandler != null) {
-                    Message msg = new Message();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("error", errorMessage);
-                    msg.setData(bundle);
-                    msg.what = Constants.ERROR;
-                    BaseRequestDealer.answerHandler.sendMessage(msg);
-                }*/
             }
 
             @Override
