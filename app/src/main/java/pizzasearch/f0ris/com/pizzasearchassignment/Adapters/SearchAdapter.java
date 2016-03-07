@@ -18,6 +18,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.util.ArrayList;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
+import pizzasearch.f0ris.com.pizzasearchassignment.Constants;
 import pizzasearch.f0ris.com.pizzasearchassignment.Models.SearchItem;
 import pizzasearch.f0ris.com.pizzasearchassignment.R;
 
@@ -29,15 +30,7 @@ public class SearchAdapter extends BaseAdapter {
 
     private final LayoutInflater inflater;
     private ArrayList<SearchItem> arrayList;
-    private SparseIntArray rating_bg_colors = new SparseIntArray() {
-        {
-            put(8, Color.parseColor("#73CF42"));
-            put(7, Color.parseColor("#C5DE35"));
-            put(6, Color.parseColor("#FFC800"));
-            put(5, Color.parseColor("#FF9600"));
-            put(4, Color.parseColor("#FF6701"));
-        }
-    };
+
 
     private ImageLoader imageLoader;
     private DisplayImageOptions options;
@@ -113,7 +106,7 @@ public class SearchAdapter extends BaseAdapter {
         GradientDrawable rating_bg = (GradientDrawable) viewHolder.rating.getBackground();
 
         if (item.rating > 4)
-            rating_bg.setColor(rating_bg_colors.get((int) Math.floor(item.rating)));
+            rating_bg.setColor(Constants.rating_bg_colors.get((int) Math.floor(item.rating)));
         else
         if (item.rating == 0) //no rating
             viewHolder.rating.setVisibility(View.GONE);
