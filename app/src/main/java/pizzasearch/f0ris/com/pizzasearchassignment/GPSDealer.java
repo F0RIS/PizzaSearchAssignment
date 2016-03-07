@@ -62,6 +62,7 @@ public class GPSDealer implements LocationListener {
     public void onProviderDisabled(String provider) {
 
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
         Toast.makeText(context, "Gps is turned off!! ",
                 Toast.LENGTH_SHORT).show();

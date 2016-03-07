@@ -58,9 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 }
 
-                GPSDealer.emulateNYLocation(((CheckBox) findViewById(R.id.emulate_NY_checkBox)).isChecked());
+                boolean emulateNY = ((CheckBox) findViewById(R.id.emulate_NY_checkBox)).isChecked();
+                GPSDealer.emulateNYLocation(emulateNY);
 
-                if (GPSDealer.isLocationDetected()) {
+                if (GPSDealer.isLocationDetected() || emulateNY) {
                     progressDialog = new ProgressDialog(this);
                     progressDialog.setMessage(getString(R.string.search));
                     progressDialog.show();
