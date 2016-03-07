@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.Adapters.SearchAdapter;
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
-import pizzasearch.f0ris.com.pizzasearchassignment.GPSDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.Network.RequestDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.R;
 import pizzasearch.f0ris.com.pizzasearchassignment.Views.LoadMoreListView;
@@ -41,7 +40,7 @@ public class SearchResultActivity extends AppCompatActivity {
                         listView.onLoadMoreComplete();
                         return true;
                     }
-                }, GPSDealer.latitude, GPSDealer.longitude);
+                });
 
             }
         });

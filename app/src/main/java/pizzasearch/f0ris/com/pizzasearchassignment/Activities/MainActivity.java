@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.CheckBox;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
 import pizzasearch.f0ris.com.pizzasearchassignment.GPSDealer;
@@ -46,18 +48,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.search_button:
-                gpsDealer.printLL();
 
-                progressDialog = new ProgressDialog(this);
-                progressDialog.setMessage(getString(R.string.search));
-                progressDialog.show();
+                GPSDealer.emulateNYLocation(((CheckBox) findViewById(R.id.emulate_NY_checkBox)).isChecked());
 
-                AppController.searchResultArray.clear(); //deleting previous search result
+                if (GPSDealer.isLocationDetected()) {
+                    progressDialog = new ProgressDialog(this);
+                    progressDialog.setMessage(getString(R.string.search));
+                    progressDialog.show();
 
-                RequestDealer.searchPizzaBar(searchCallback, 40.7127837, -74.0059413); //NY location
-
+                    AppController.searchResultArray.clear(); //deleting previous search result
+                    RequestDealer.searchPizzaBar(searchCallback);
+                } else
+                    noLocationDialogShow();
 
                 break;
         }
+    }
+
+    private void noLocationDialogShow() {
+
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.no_location))
+                .setMessage(getString(R.string.no_location))
+                .setPositiveButton(getString(android.R.string.ok), null)
+                .show();
+
     }
 }

@@ -19,9 +19,14 @@ public class GPSDealer implements LocationListener {
     private LocationManager locationManager;
     private Context context;
 
-    public static double longitude;
-    public static double latitude;
+    private static double longitude;
+    private static double latitude;
+    private static boolean emulateNY = false;
+    private static boolean locationDetected = false;
 
+    public static boolean isLocationDetected() {
+        return locationDetected;
+    }
 
     public GPSDealer() {
         context = AppController.getAppContext();
@@ -45,13 +50,13 @@ public class GPSDealer implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
+        locationDetected = true;
 
         String msg = "New Latitude: " + location.getLatitude()
                 + "New Longitude: " + location.getLongitude();
 
-        this.latitude = location.getLatitude();
-        this.longitude  = location.getLatitude();
-
+        latitude = location.getLatitude();
+        longitude = location.getLongitude();
 
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
@@ -84,4 +89,23 @@ public class GPSDealer implements LocationListener {
 
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
+
+    public static void emulateNYLocation(boolean val) {
+        emulateNY = val;
+    }
+
+    public static double getLatitude() {
+        if (emulateNY)
+            return 40.7127837;
+        else
+            return latitude;
+    }
+
+    public static double getLongitude() {
+        if (emulateNY)
+            return -74.0059413;
+        else
+            return longitude;
+    }
+
 }

@@ -13,6 +13,7 @@ import java.util.Map;
 
 import pizzasearch.f0ris.com.pizzasearchassignment.AppController;
 import pizzasearch.f0ris.com.pizzasearchassignment.Constants;
+import pizzasearch.f0ris.com.pizzasearchassignment.GPSDealer;
 import pizzasearch.f0ris.com.pizzasearchassignment.Interfaces.IRequest;
 import pizzasearch.f0ris.com.pizzasearchassignment.JsonParser;
 
@@ -22,15 +23,15 @@ import pizzasearch.f0ris.com.pizzasearchassignment.JsonParser;
 public class RequestDealer {
 
 
-    public static void searchPizzaBar(final Handler.Callback searchCallback, double latitude, double longitude) {
+    public static void searchPizzaBar(final Handler.Callback searchCallback) {
 
 
-        //set request limit
+        //setting request params
         String requestUrl = Constants.PIZZA_BAR_QUERY_URL
-                + "&limit="
-                + String.valueOf(AppController.searchResultArray.size() + Constants.FETCH_COUNT)
-                + "&ll="+latitude+"%2C"+longitude;
+                + "&limit=" + String.valueOf(AppController.searchResultArray.size() + Constants.FETCH_COUNT)
+                + "&ll=" + GPSDealer.getLatitude() + "%2C" + GPSDealer.getLongitude();
 
+        System.out.println(requestUrl);
 
         Map<String, String> params = new HashMap<>();
         makeAdvancedRequest(Request.Method.GET, requestUrl, params, new IParseFunction() {
