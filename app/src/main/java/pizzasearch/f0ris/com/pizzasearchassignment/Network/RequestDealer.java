@@ -39,8 +39,7 @@ public class RequestDealer {
             public void parse(JSONObject response) {
                 AppController.searchResultArray.clear();
                 JsonParser.parseVenue(response);
-                //TODO solve distance issue
-                Collections.sort(AppController.searchResultArray);
+//                Collections.sort(AppController.searchResultArray);
                 searchCallback.handleMessage(null);
             }
         });

@@ -69,19 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     AppController.searchResultArray.clear(); //deleting previous search result
                     RequestDealer.searchPizzaBar(searchCallback);
                 } else
-                    showNoLocationDialog();
+                    Toast.makeText(this, getString(R.string.no_location), Toast.LENGTH_SHORT).show();
 
                 break;
         }
-    }
-
-    private void showNoLocationDialog() {
-
-        new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.no_location))
-                .setMessage(getString(R.string.no_location))
-                .setPositiveButton(getString(android.R.string.ok), null)
-                .show();
-
     }
 }

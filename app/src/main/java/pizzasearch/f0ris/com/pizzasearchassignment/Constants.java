@@ -15,7 +15,7 @@ public interface Constants {
             + "&client_secret=" + client_secret
             + "&v=20130815&locale=ru&m=foursquare" +
             "&categoryId=4bf58dd8d48988d1ca941735" + //pizzabar category
-            "&mode=typed";
+            "&mode=typed&intent=checkin";
 
 
 }
