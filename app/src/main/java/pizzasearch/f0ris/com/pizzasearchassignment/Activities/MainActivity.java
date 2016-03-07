@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.search_button:
 
                 if (!Utils.isNetworkConnected()) {
-                    Utils.loadResultsFromDisk();
-                    searchCallback.handleMessage(null);
+                    Utils.loadResultsFromDisk(searchCallback);
                     Toast.makeText(this, R.string.loaded_from_cache, Toast.LENGTH_SHORT).show();
                     break;
                 }

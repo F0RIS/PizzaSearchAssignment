@@ -5,6 +5,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.AsyncTask;
+import android.os.Handler;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -37,27 +39,45 @@ public class Utils {
 
     public static void storeResultsOnDisk() {
 
-        try {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    FileOutputStream fos = new FileOutputStream(getCacheFileName());
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(AppController.searchResultArray);
+                    oos.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
 
-            FileOutputStream fos = new FileOutputStream(getCacheFileName());
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(AppController.searchResultArray);
-            oos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
 
-    public static void loadResultsFromDisk() {
+    public static void loadResultsFromDisk(final Handler.Callback searchCallback) {
 
-        try {
-            FileInputStream fis = new FileInputStream(getCacheFileName());
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            AppController.searchResultArray = (ArrayList<SearchItem>) ois.readObject();
-            ois.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                try {
+                    FileInputStream fis = new FileInputStream(getCacheFileName());
+                    ObjectInputStream ois = new ObjectInputStream(fis);
+                    AppController.searchResultArray = (ArrayList<SearchItem>) ois.readObject();
+                    ois.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                searchCallback.handleMessage(null);
+            }
+        }.execute();
+
+
     }
 }

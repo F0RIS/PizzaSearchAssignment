@@ -39,6 +39,9 @@ public class SearchResultActivity extends AppCompatActivity {
                     public boolean handleMessage(Message msg) {
                         searchAdapter.notifyDataSetChanged();
                         listView.onLoadMoreComplete();
+                        if (Utils.isNetworkConnected()){
+                            Utils.storeResultsOnDisk();
+                        }
                         return true;
                     }
                 });
