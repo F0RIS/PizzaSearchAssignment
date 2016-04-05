@@ -97,11 +97,15 @@ public class SearchAdapter extends BaseAdapter {
 
         GradientDrawable rating_bg = (GradientDrawable) viewHolder.rating.getBackground();
 
+        if (item.rating == 0) { //no rating
+            viewHolder.rating.setVisibility(View.GONE);
+            return convertView;
+        }else{
+            viewHolder.rating.setVisibility(View.VISIBLE);
+        }
+
         if (item.rating > 4)
             rating_bg.setColor(Constants.rating_bg_colors.get((int) Math.floor(item.rating)));
-        else
-        if (item.rating == 0) //no rating
-            viewHolder.rating.setVisibility(View.GONE);
         else //low rating
             rating_bg.setColor(Color.RED);
 
