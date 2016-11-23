@@ -32,3 +32,7 @@ latest downloaded data if there is no Internet connection.
 All disk writes must be performed asynchronously.
 You are free to choose any libraries or tools. Explain your
 choice.
+
+#Screenshots
+
+![alt text](https://raw.githubusercontent.com/F0RIS/Ogar-servers-PizzaSearchAssignment/master/screens.jpg "Screns sjpg")
