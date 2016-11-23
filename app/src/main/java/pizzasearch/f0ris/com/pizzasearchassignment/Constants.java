@@ -10,10 +10,11 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
  */
 public interface Constants {
 
-    int FETCH_COUNT = 10;
+    int FETCH_COUNT = 20;
 
     SparseIntArray rating_bg_colors = new SparseIntArray() {
         {
+            put(9, Color.parseColor("#58ff00"));
             put(8, Color.parseColor("#73CF42"));
             put(7, Color.parseColor("#C5DE35"));
             put(6, Color.parseColor("#FFC800"));

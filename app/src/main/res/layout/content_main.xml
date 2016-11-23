@@ -24,11 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/emulate_NY"
+            android:textSize="23sp"
             android:paddingRight="5dp"/>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/search"
+            android:padding="10dp"
+            android:textSize="20sp"
             android:id="@+id/search_button"
             android:onClick="onClick"
             />

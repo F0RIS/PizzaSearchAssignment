@@ -15,7 +15,6 @@ import pizzasearch.f0ris.com.pizzasearchassignment.Models.SearchItem;
  */
 public class AppController extends Application {
 
-    private static Context context;
     private static AppController instance;
     private static RequestQueue requestQueue;
     public static ArrayList<SearchItem> searchResultArray = new ArrayList<>(50);
@@ -25,11 +24,10 @@ public class AppController extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        AppController.context = getApplicationContext();
     }
 
     public static Context getAppContext() {
-        return AppController.context;
+        return instance.getApplicationContext();
     }
 
     public static AppController getInstance() {

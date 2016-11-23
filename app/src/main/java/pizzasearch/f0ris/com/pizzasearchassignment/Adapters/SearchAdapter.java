@@ -46,7 +46,7 @@ public class SearchAdapter extends BaseAdapter {
     }
 
 
-    class ViewHolder {
+    private class ViewHolder {
         TextView name;
         ImageView photo;
         TextView distance;
