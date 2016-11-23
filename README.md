@@ -35,4 +35,4 @@ choice.
 
 #Screenshots
 
-![alt text](https://raw.githubusercontent.com/F0RIS/Ogar-servers-PizzaSearchAssignment/master/screens.jpg "Screns sjpg")
+![alt text](https://raw.githubusercontent.com/F0RIS/PizzaSearchAssignment/master/screens.jpg "Screens jpg")
